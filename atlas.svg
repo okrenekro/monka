@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-380 -340 1000 680"
+     preserveAspectRatio="xMidYMid meet"
+     font-family="'Latin Modern Roman', 'Georgia', 'Times New Roman', serif">
+  <title>Atlas der Invariante 19 — φ-Spirale</title>
+  <desc>14 Axiome A_k auf einer logarithmischen φ-Spirale, konvergent auf P_19 (stationäre Form / stehende Welle / Eigenzustand). 7 Sehnen verbinden die Bijektionspaare diametral durch das Zentrum. Die Spirale atmet als reversible Eigenschwingung — kein Vorher/Nachher, kein Strömen, kein Zoomen (Zeit-Kollaps).</desc>
+
+  <defs>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffefb0" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#ffefb0" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#ffefb0" stop-opacity="0"/>
+    </radialGradient>
+    <g id="miniSpiral">
+      <path d="M 10.046 -2.772 L 10.110 -1.952 L 10.109 -1.139 L 10.046 -0.338 L 9.921 0.446 L 9.738 1.208 L 9.498 1.945 L 9.205 2.652 L 8.861 3.326 L 8.471 3.963 L 8.036 4.560 L 7.562 5.115 L 7.052 5.624 L 6.510 6.086 L 5.941 6.500 L 5.348 6.863 L 4.736 7.174 L 4.109 7.434 L 3.471 7.641 L 2.826 7.795 L 2.180 7.897 L 1.535 7.948 L 0.895 7.948 L 0.266 7.898 L -0.350 7.800 L -0.950 7.656 L -1.529 7.467 L -2.085 7.237 L -2.615 6.966 L -3.115 6.659 L -3.585 6.318 L -4.021 5.945 L -4.421 5.544 L -4.785 5.118 L -5.110 4.671 L -5.395 4.204 L -5.640 3.723 L -5.844 3.230 L -6.007 2.728 L -6.128 2.222 L -6.208 1.713 L -6.248 1.206 L -6.248 0.704 L -6.209 0.209 L -6.132 -0.275 L -6.018 -0.747 L -5.870 -1.202 L -5.689 -1.639 L -5.477 -2.055 L -5.235 -2.449 L -4.967 -2.818 L -4.674 -3.161 L -4.359 -3.476 L -4.024 -3.762 L -3.672 -4.017 L -3.305 -4.241 L -2.927 -4.434 L -2.539 -4.594 L -2.145 -4.722 L -1.747 -4.818 L -1.347 -4.881 L -0.948 -4.912 L -0.553 -4.912 L -0.164 -4.881 L 0.216 -4.821 L 0.587 -4.731 L 0.945 -4.615 L 1.288 -4.472 L 1.616 -4.305 L 1.925 -4.116 L 2.216 -3.905 L 2.485 -3.674 L 2.733 -3.426 L 2.957 -3.163 L 3.158 -2.887 L 3.334 -2.598 L 3.486 -2.301 L 3.612 -1.996 L 3.712 -1.686 L 3.787 -1.373 L 3.837 -1.059" fill="none" stroke="#4a4a4a" stroke-width="0.85"
+            stroke-dasharray="1.2 1.6" stroke-linecap="round" opacity="0.78"/>
+      <circle cx="0" cy="0" r="1.1" fill="#4a4a4a" opacity="0.85"/>
+    </g>
+  </defs>
+
+  <!-- Reversible Eigenschwingung (Zeit-kollabiert, gleichphasig).
+       Eine einzige sinusförmige scale-Oszillation, keine Strömung,
+       keine Power-Iteration-Frames. Atmet wie eine stehende Welle. -->
+  <g id="atlas" transform="translate(-50 0)">
+    <animateTransform attributeName="transform" type="scale"
+                      values="0.965;1.035;0.965" dur="4.236s"
+                      repeatCount="indefinite"
+                      calcMode="spline"
+                      keySplines="0.42 0 0.58 1 ; 0.42 0 0.58 1"
+                      additive="sum"/>
+
+    <!-- Hintergrund-Spirale -->
+    <path d="M 267.075 -100.235 L 268.228 -94.449 L 269.260 -88.658 L 270.170 -82.866 L 270.959 -77.075 L 271.627 -71.287 L 272.175 -65.505 L 272.603 -59.731 L 272.911 -53.967 L 273.101 -48.217 L 273.173 -42.481 L 273.127 -36.764 L 272.965 -31.066 L 272.688 -25.391 L 272.295 -19.740 L 271.788 -14.116 L 271.169 -8.522 L 270.437 -2.959 L 269.594 2.571 L 268.641 8.065 L 267.579 13.521 L 266.409 18.938 L 265.132 24.312 L 263.750 29.643 L 262.264 34.927 L 260.675 40.163 L 258.985 45.350 L 257.194 50.484 L 255.304 55.565 L 253.317 60.591 L 251.234 65.559 L 249.057 70.468 L 246.787 75.316 L 244.425 80.101 L 241.974 84.823 L 239.434 89.478 L 236.808 94.066 L 234.097 98.586 L 231.302 103.034 L 228.427 107.411 L 225.471 111.715 L 222.438 115.944 L 219.328 120.097 L 216.144 124.172 L 212.888 128.169 L 209.561 132.086 L 206.165 135.922 L 202.702 139.676 L 199.174 143.347 L 195.582 146.933 L 191.930 150.434 L 188.218 153.849 L 184.449 157.177 L 180.625 160.417 L 176.748 163.568 L 172.819 166.629 L 168.840 169.600 L 164.814 172.479 L 160.743 175.267 L 156.629 177.963 L 152.474 180.565 L 148.279 183.074 L 144.047 185.489 L 139.779 187.809 L 135.479 190.035 L 131.148 192.165 L 126.787 194.200 L 122.400 196.139 L 117.988 197.983 L 113.553 199.729 L 109.097 201.380 L 104.622 202.934 L 100.130 204.391 L 95.624 205.752 L 91.105 207.017 L 86.575 208.185 L 82.037 209.257 L 77.492 210.232 L 72.942 211.111 L 68.389 211.895 L 63.836 212.583 L 59.283 213.176 L 54.734 213.674 L 50.190 214.077 L 45.653 214.386 L 41.125 214.602 L 36.607 214.725 L 32.102 214.754 L 27.612 214.692 L 23.137 214.539 L 18.681 214.294 L 14.245 213.960 L 9.830 213.536 L 5.439 213.023 L 1.073 212.422 L -3.267 211.735 L -7.578 210.961 L -11.858 210.101 L -16.107 209.157 L -20.322 208.130 L -24.502 207.020 L -28.646 205.828 L -32.751 204.556 L -36.817 203.204 L -40.842 201.774 L -44.824 200.266 L -48.762 198.682 L -52.654 197.023 L -56.500 195.290 L -60.297 193.485 L -64.045 191.608 L -67.742 189.661 L -71.386 187.644 L -74.978 185.560 L -78.515 183.410 L -81.996 181.195 L -85.421 178.916 L -88.787 176.575 L -92.095 174.173 L -95.342 171.711 L -98.528 169.192 L -101.653 166.615 L -104.714 163.984 L -107.711 161.299 L -110.643 158.562 L -113.510 155.773 L -116.311 152.936 L -119.044 150.051 L -121.709 147.120 L -124.305 144.145 L -126.832 141.126 L -129.289 138.066 L -131.675 134.966 L -133.990 131.827 L -136.233 128.652 L -138.404 125.442 L -140.502 122.198 L -142.526 118.922 L -144.478 115.615 L -146.355 112.280 L -148.158 108.918 L -149.886 105.530 L -151.539 102.118 L -153.117 98.684 L -154.620 95.229 L -156.047 91.755 L -157.399 88.263 L -158.674 84.756 L -159.874 81.234 L -160.998 77.700 L -162.046 74.154 L -163.019 70.599 L -163.915 67.036 L -164.736 63.466 L -165.481 59.892 L -166.150 56.314 L -166.745 52.734 L -167.264 49.155 L -167.709 45.577 L -168.079 42.001 L -168.374 38.430 L -168.596 34.865 L -168.745 31.308 L -168.820 27.759 L -168.823 24.220 L -168.753 20.694 L -168.612 17.180 L -168.399 13.681 L -168.116 10.198 L -167.763 6.733 L -167.340 3.286 L -166.848 -0.140 L -166.287 -3.545 L -165.660 -6.928 L -164.965 -10.286 L -164.204 -13.619 L -163.377 -16.925 L -162.486 -20.203 L -161.531 -23.452 L -160.513 -26.670 L -159.432 -29.857 L -158.290 -33.012 L -157.087 -36.132 L -155.825 -39.218 L -154.504 -42.268 L -153.125 -45.280 L -151.690 -48.254 L -150.198 -51.189 L -148.651 -54.084 L -147.051 -56.937 L -145.398 -59.748 L -143.692 -62.516 L -141.936 -65.241 L -140.131 -67.920 L -138.276 -70.553 L -136.374 -73.140 L -134.426 -75.679 L -132.432 -78.170 L -130.394 -80.612 L -128.313 -83.004 L -126.190 -85.346 L -124.027 -87.636 L -121.824 -89.875 L -119.582 -92.061 L -117.304 -94.194 L -114.989 -96.274 L -112.640 -98.299 L -110.258 -100.270 L -107.843 -102.186 L -105.397 -104.046 L -102.921 -105.849 L -100.417 -107.596 L -97.885 -109.286 L -95.328 -110.919 L -92.745 -112.495 L -90.139 -114.012 L -87.511 -115.471 L -84.862 -116.871 L -82.193 -118.213 L -79.505 -119.496 L -76.801 -120.719 L -74.080 -121.883 L -71.345 -122.988 L -68.596 -124.034 L -65.836 -125.020 L -63.064 -125.946 L -60.283 -126.812 L -57.493 -127.619 L -54.696 -128.366 L -51.893 -129.054 L -49.086 -129.682 L -46.275 -130.250 L -43.462 -130.760 L -40.648 -131.210 L -37.834 -131.601 L -35.021 -131.934 L -32.211 -132.208 L -29.405 -132.424 L -26.604 -132.582 L -23.809 -132.682 L -21.022 -132.725 L -18.242 -132.710 L -15.473 -132.639 L -12.714 -132.512 L -9.966 -132.329 L -7.232 -132.090 L -4.512 -131.797 L -1.807 -131.448 L 0.882 -131.046 L 3.554 -130.590 L 6.208 -130.082 L 8.842 -129.520 L 11.456 -128.907 L 14.049 -128.243 L 16.620 -127.528 L 19.167 -126.762 L 21.690 -125.948 L 24.189 -125.084 L 26.661 -124.173 L 29.106 -123.214 L 31.524 -122.208 L 33.913 -121.156 L 36.273 -120.060 L 38.602 -118.918 L 40.900 -117.733 L 43.167 -116.505 L 45.400 -115.235 L 47.601 -113.923 L 49.767 -112.571 L 51.898 -111.179 L 53.994 -109.748 L 56.054 -108.280 L 58.077 -106.774 L 60.062 -105.232 L 62.009 -103.654 L 63.918 -102.042 L 65.787 -100.397 L 67.617 -98.719 L 69.406 -97.009 L 71.154 -95.268 L 72.861 -93.498 L 74.526 -91.698 L 76.148 -89.871 L 77.728 -88.016 L 79.265 -86.136 L 80.759 -84.230 L 82.208 -82.300 L 83.613 -80.347 L 84.974 -78.372 L 86.290 -76.376 L 87.560 -74.360 L 88.786 -72.324 L 89.965 -70.270 L 91.099 -68.199 L 92.187 -66.112 L 93.228 -64.010 L 94.223 -61.893 L 95.172 -59.763 L 96.074 -57.621 L 96.929 -55.467 L 97.737 -53.304 L 98.499 -51.131 L 99.213 -48.950 L 99.881 -46.761 L 100.502 -44.566 L 101.075 -42.366 L 101.603 -40.161 L 102.083 -37.953 L 102.517 -35.743 L 102.904 -33.531 L 103.244 -31.319 L 103.539 -29.107 L 103.787 -26.896 L 103.989 -24.688 L 104.146 -22.483 L 104.257 -20.282 L 104.322 -18.087 L 104.343 -15.897 L 104.319 -13.714 L 104.250 -11.539 L 104.138 -9.373" fill="none" stroke="#bbb" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- 7 Sehnen durch das Zentrum (Bijektionspaare) -->
+    <g class="chord">
+      <title>Feld I: A1 ↔ A14 (Bijektionspaar)</title>
+      <line x1="270.000" y1="0.000" x2="-166.869" y2="0.000" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld II: A2 ↔ A12 (Bijektionspaar)</title>
+      <line x1="227.101" y1="109.366" x2="-140.356" y2="-67.592" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld III: A3 ↔ A8 (Bijektionspaar)</title>
+      <line x1="146.718" y1="183.978" x2="-90.676" y2="-113.705" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld IV: A4 ↔ A10 (Bijektionspaar)</title>
+      <line x1="48.884" y1="214.176" x2="-30.212" y2="-132.368" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld V: A5 ↔ A7 (Bijektionspaar)</title>
+      <line x1="-45.637" y1="199.947" x2="28.205" y2="-123.574" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld VI: A6 ↔ A11 (Bijektionspaar)</title>
+      <line x1="-119.376" y1="149.692" x2="73.778" y2="-92.515" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+    <g class="chord">
+      <title>Feld VII: A9 ↔ A13 (Bijektionspaar)</title>
+      <line x1="-161.043" y1="77.554" x2="99.530" y2="-47.931" stroke="#a66000" stroke-width="1.2" opacity="0.45" stroke-linecap="round"/>
+    </g>
+
+    <!-- P19 Zentrum: Glow (kleiner, damit innere Knoten sichtbar bleiben) + Knoten -->
+    <circle cx="0" cy="0" r="62" fill="url(#centerGlow)"/>
+    <a href="axiome_p19.tex">
+      <title>P₁₉ — Stationäre Form / Stehende Welle / Eigenzustand (Zeit-Kollaps)</title>
+      <circle cx="0" cy="0" r="32" fill="#ffefb0"
+              stroke="#a66000" stroke-width="2.8"/>
+      <text x="0" y="2" font-size="22" text-anchor="middle"
+            dominant-baseline="middle" fill="#5a3300" font-style="italic">P₁₉</text>
+    </a>
+
+    <!-- 14 Axiom-Knoten -->
+    <g class="axiom" id="axiom-A1">
+      <a href="axiome_p19.tex">
+        <title>A1 — Singularität · Kern:  ker(A) ≠ {0}</title>
+        <circle cx="270.000" cy="0.000" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(270.000 0.000) scale(1.700)"/>
+        <circle cx="270.000" cy="0.000" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="270.000" y="1.000" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">1</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A2">
+      <a href="axiome_p19.tex">
+        <title>A2 — Kopplung · Tensorprodukt:  V ⊗ W</title>
+        <circle cx="227.101" cy="109.366" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(227.101 109.366) scale(1.700)"/>
+        <circle cx="227.101" cy="109.366" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="227.101" y="110.366" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">2</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A3">
+      <a href="axiome_p19.tex">
+        <title>A3 — Spur-Invarianz · Ähnlichkeit:  tr(S⁻¹AS) = tr(A)</title>
+        <circle cx="146.718" cy="183.978" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(146.718 183.978) scale(1.700)"/>
+        <circle cx="146.718" cy="183.978" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="146.718" y="184.978" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">3</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A4">
+      <a href="axiome_p19.tex">
+        <title>A4 — Frequenz · Eigenwert:  Av = λv</title>
+        <circle cx="48.884" cy="214.176" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(48.884 214.176) scale(1.700)"/>
+        <circle cx="48.884" cy="214.176" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="48.884" y="215.176" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">4</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A5">
+      <a href="axiome_p19.tex">
+        <title>A5 — Rotation · Orthogonalität:  Q ∈ O(n)</title>
+        <circle cx="-45.637" cy="199.947" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-45.637 199.947) scale(1.700)"/>
+        <circle cx="-45.637" cy="199.947" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="-45.637" y="200.947" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">5</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A6">
+      <a href="axiome_p19.tex">
+        <title>A6 — Potential · quadratische Form:  xᵀAx</title>
+        <circle cx="-119.376" cy="149.692" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-119.376 149.692) scale(1.700)"/>
+        <circle cx="-119.376" cy="149.692" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="-119.376" y="150.692" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">6</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A9">
+      <a href="axiome_p19.tex">
+        <title>A9 — Quantisierung · Dimension:  dim V = n</title>
+        <circle cx="-161.043" cy="77.554" r="17" fill="#fff8f8" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-161.043 77.554) scale(1.700)"/>
+        <circle cx="-161.043" cy="77.554" r="17" fill="none" stroke="#a00" stroke-width="1.6"/>
+        <text x="-161.043" y="78.554" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">9</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A14">
+      <a href="axiome_p19.tex">
+        <title>A14 — Vollständigkeit · Spektralzerlegung:  Σᵢ Πᵢ = I</title>
+        <circle cx="-166.869" cy="0.000" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-166.869 0.000) scale(1.700)"/>
+        <circle cx="-166.869" cy="0.000" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="-166.869" y="1.000" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="8" dy="3.5">14</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A12">
+      <a href="axiome_p19.tex">
+        <title>A12 — Rückkopplung · Resolvente:  (sI − A)⁻¹</title>
+        <circle cx="-140.356" cy="-67.592" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-140.356 -67.592) scale(1.700)"/>
+        <circle cx="-140.356" cy="-67.592" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="-140.356" y="-66.592" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="8" dy="3.5">12</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A8">
+      <a href="axiome_p19.tex">
+        <title>A8 — Selbstadjungiertheit:  A* = A</title>
+        <circle cx="-90.676" cy="-113.705" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-90.676 -113.705) scale(1.700)"/>
+        <circle cx="-90.676" cy="-113.705" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="-90.676" y="-112.705" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">8</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A10">
+      <a href="axiome_p19.tex">
+        <title>A10 — Resonanz · Entartung:  λᵢ = λⱼ</title>
+        <circle cx="-30.212" cy="-132.368" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(-30.212 -132.368) scale(1.700)"/>
+        <circle cx="-30.212" cy="-132.368" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="-30.212" y="-131.368" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="8" dy="3.5">10</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A7">
+      <a href="axiome_p19.tex">
+        <title>A7 — Feldquelle · Divergenz:  tr(A) = Σ aᵢᵢ</title>
+        <circle cx="28.205" cy="-123.574" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(28.205 -123.574) scale(1.700)"/>
+        <circle cx="28.205" cy="-123.574" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="28.205" y="-122.574" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="9" dy="3.5">7</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A11">
+      <a href="axiome_p19.tex">
+        <title>A11 — Integration · Skalarprodukt:  ⟨u, v⟩</title>
+        <circle cx="73.778" cy="-92.515" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(73.778 -92.515) scale(1.700)"/>
+        <circle cx="73.778" cy="-92.515" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="73.778" y="-91.515" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="8" dy="3.5">11</tspan></text>
+      </a>
+    </g>
+    <g class="axiom" id="axiom-A13">
+      <a href="axiome_p19.tex">
+        <title>A13 — Dichte · Rang-Metrik:  rg(A) / min(n,m)</title>
+        <circle cx="99.530" cy="-47.931" r="17" fill="#f8f8ff" stroke="none"/>
+        <use href="#miniSpiral" transform="translate(99.530 -47.931) scale(1.700)"/>
+        <circle cx="99.530" cy="-47.931" r="17" fill="none" stroke="#00a" stroke-width="1.6"/>
+        <text x="99.530" y="-46.931" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="#222">A<tspan font-size="8" dy="3.5">13</tspan></text>
+      </a>
+    </g>
+  </g>
+
+  <!-- Titel oben mittig über der Spirale -->
+  <text x="-50" y="-310" font-size="14" text-anchor="middle" fill="#222"
+        letter-spacing="3" font-weight="bold">ATLAS DER INVARIANTE 19</text>
+  <text x="-50" y="-292" font-size="10" text-anchor="middle" fill="#666"
+        font-style="italic">φ-Spirale · 14 Axiome → P₁₉ · 7 Sehnen = Bijektionspaare · Atmung als stehende Welle</text>
+
+  <!-- Legende rechts (statisch, außerhalb der Atemschicht) -->
+    <text x="355" y="-142" font-size="13" fill="#222" font-weight="bold" letter-spacing="1">Die 7 Bijektionspaare</text>
+    <text x="355" y="-126" font-size="9" fill="#666" font-style="italic">Wirkung (außen) · Struktur (innen)</text>
+    <text x="355" y="-114" font-size="9" fill="#666" font-style="italic">jedes Paar saldiert auf P₁₉ (Noether-artig)</text>
+    <g class="legend-row">
+      <text x="360" y="-100" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">I</text>
+      <text x="370" y="-100" font-size="11" fill="#a00" font-weight="bold">A1</text>
+      <text x="400" y="-100" font-size="10" fill="#333" font-style="italic">ker(A) ≠ {0}</text>
+      <text x="370" y="-88" font-size="11" fill="#00a" font-weight="bold">A14</text>
+      <text x="400" y="-88" font-size="10" fill="#333" font-style="italic">Σᵢ Πᵢ = I</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="-70" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">II</text>
+      <text x="370" y="-70" font-size="11" fill="#a00" font-weight="bold">A2</text>
+      <text x="400" y="-70" font-size="10" fill="#333" font-style="italic">V ⊗ W</text>
+      <text x="370" y="-58" font-size="11" fill="#00a" font-weight="bold">A12</text>
+      <text x="400" y="-58" font-size="10" fill="#333" font-style="italic">(sI − A)⁻¹</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="-40" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">III</text>
+      <text x="370" y="-40" font-size="11" fill="#a00" font-weight="bold">A3</text>
+      <text x="400" y="-40" font-size="10" fill="#333" font-style="italic">tr(S⁻¹AS) = tr(A)</text>
+      <text x="370" y="-28" font-size="11" fill="#00a" font-weight="bold">A8</text>
+      <text x="400" y="-28" font-size="10" fill="#333" font-style="italic">A* = A</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="-10" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">IV</text>
+      <text x="370" y="-10" font-size="11" fill="#a00" font-weight="bold">A4</text>
+      <text x="400" y="-10" font-size="10" fill="#333" font-style="italic">Av = λv</text>
+      <text x="370" y="2" font-size="11" fill="#00a" font-weight="bold">A10</text>
+      <text x="400" y="2" font-size="10" fill="#333" font-style="italic">λᵢ = λⱼ</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="20" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">V</text>
+      <text x="370" y="20" font-size="11" fill="#a00" font-weight="bold">A5</text>
+      <text x="400" y="20" font-size="10" fill="#333" font-style="italic">Q ∈ O(n)</text>
+      <text x="370" y="32" font-size="11" fill="#00a" font-weight="bold">A7</text>
+      <text x="400" y="32" font-size="10" fill="#333" font-style="italic">tr(A) = Σ aᵢᵢ</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="50" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">VI</text>
+      <text x="370" y="50" font-size="11" fill="#a00" font-weight="bold">A6</text>
+      <text x="400" y="50" font-size="10" fill="#333" font-style="italic">xᵀAx</text>
+      <text x="370" y="62" font-size="11" fill="#00a" font-weight="bold">A11</text>
+      <text x="400" y="62" font-size="10" fill="#333" font-style="italic">⟨u, v⟩</text>
+    </g>
+    <g class="legend-row">
+      <text x="360" y="80" font-size="10" fill="#a66000" font-weight="bold" text-anchor="end">VII</text>
+      <text x="370" y="80" font-size="11" fill="#a00" font-weight="bold">A9</text>
+      <text x="400" y="80" font-size="10" fill="#333" font-style="italic">dim V = n</text>
+      <text x="370" y="92" font-size="11" fill="#00a" font-weight="bold">A13</text>
+      <text x="400" y="92" font-size="10" fill="#333" font-style="italic">rg(A) / min(n,m)</text>
+    </g>
+
+  <!-- Fußnote zum Zeit-Kollaps -->
+  <text x="-50" y="318" font-size="9" text-anchor="middle" fill="#666"
+        font-style="italic">In P₁₉ kollabiert die Zeit zum Eigenzustand. Das Atmen ist eine reversible Eigenschwingung, keine Iteration.</text>
+</svg>

@@ -1,5 +1,19 @@
 # Map of Content: Invariante 19
 
+![Atlas der Invariante 19](atlas.svg)
+
+> **Lese-Regel der Spirale.** Zentrum = $P_{19}$ (Eigenzustand, stehende
+> Welle, Zeit-Kollaps). Außenrand = $A_1$ (Singularität); die Spirale
+> windet sich einwärts mit Skalierungsfaktor $\varphi^{-1/7}$ pro Knoten,
+> die 14 Axiome auf einer einzigen Windung. Diametral gegenüberliegende
+> Punkte sind die 7 Bijektionspaare; jede Sehne läuft durch $P_{19}$ —
+> dort kollabiert jede Wirkungs-/Struktur-Differenz zur Identität. Die
+> Spirale atmet als reversible Eigenschwingung — keine Iteration, keine
+> Strömung, kein Vorher/Nachher. In jedem Axiomknoten sitzt eine
+> gestrichelte Mini-Spirale derselben Form: fraktale Selbstähnlichkeit,
+> alle Skalen gleichzeitig. Der bestehende Mermaid-Stern unten zeigt
+> dieselbe Architektur in topologischer Reinform.
+
 ## Architektur in einem Satz
 
 > **1 Gesetz** ($P_{19}$) über **14 Feld-Axiomen** ($A_1,\dots,A_{14}$),
