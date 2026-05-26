@@ -69,6 +69,8 @@ Aktuell abgebildet:
 - **Struktur**: Logik, Differentialgeometrie, Graphentheorie.
 - **Anwendungen**: Neuronale Netze/Transformer, Spieltheorie.
 - **Geistes-/Kultur**: Hegel-Dialektik, Musiktheorie.
+- **Klassische Physik & Sinneswelt**: Newtonsche Mechanik, Elektrik,
+  Elektromagnetismus, Optik, Akustik, Haptik.
 
 ## Notationskonvention
 

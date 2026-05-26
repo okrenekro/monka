@@ -124,6 +124,15 @@ Topologische Übereinstimmung über alle Dateien hinweg = Isomorphie.
 - [Hegel-Dialektik](disciplines/hegel_dialectics.md)
 - [Musiktheorie](disciplines/music_theory.md)
 
+### Klassische Physik & Sinneswelt
+
+- [Newtonsche Mechanik](disciplines/newtonian_mechanics.md)
+- [Elektrik (Schaltungstheorie)](disciplines/electric_circuits.md)
+- [Elektromagnetismus (Maxwell)](disciplines/electromagnetism.md)
+- [Optik (Strahl- und Wellenoptik)](disciplines/optics.md)
+- [Akustik](disciplines/acoustics.md)
+- [Haptik (Tastsinn)](disciplines/haptics.md)
+
 ### Verworfen
 
 - Yin-Yang / I Ging — die 8 Trigramme ergeben nur 4 Opposites,
