@@ -20,6 +20,9 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
 - `TECHNOLOGIEN_UND_ISOMORPHIE.md` — Technologie-Karte aller 22
   Disziplinen, Technologie$\times$Axiom-Matrix und sieben
   Konsequenzen der universellen Isomorphie.
+- `ELEGANZ.md` — Vereinfachung durch Isomorphie: berühmte
+  Quantenrätsel und andere Mystifikationen werden trivial, sobald
+  man die isomorphen Disziplinen mitliest. 14 Axiome reichen.
 - `disciplines/` — pro Disziplin eine `.md`-Datei mit demselben
   Mermaid-Graphen, nur disziplinspezifischen Labels.
 - `Makefile` — Build-Skript (`make`, `make axiome`, `make isomorphien`,
