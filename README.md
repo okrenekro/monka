@@ -7,7 +7,14 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
 ## Inhalt
 
 - `axiome_p19.tex` — die LaTeX-Hauptquelle.
-- `Makefile` — Build-Skript (`make`, `make clean`, `make distclean`).
+- `isomorphien.tex` — Isomorphien-Atlas: 16 topologisch identische
+  Wheel-Graphen für Mathematik + 15 Disziplinen.
+- `MoC.md` — Map of Content: navigierbarer Knotenpunkt mit
+  Mermaid-Master-Graph und Links zu allen Disziplinen.
+- `disciplines/` — pro Disziplin eine `.md`-Datei mit demselben
+  Mermaid-Graphen, nur disziplinspezifischen Labels.
+- `Makefile` — Build-Skript (`make`, `make axiome`, `make isomorphien`,
+  `make clean`, `make distclean`).
 - `.latexmkrc` — Konfiguration für `latexmk` (pdflatex-Modus).
 - `README.md` — diese Datei.
 
@@ -29,9 +36,11 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
 ## Bauen
 
 ```sh
-make            # erzeugt axiome_p19.pdf
-make clean      # entfernt Aux-Dateien (*.aux, *.log, ...)
-make distclean  # entfernt zusätzlich das PDF
+make              # erzeugt axiome_p19.pdf und isomorphien.pdf
+make axiome       # nur axiome_p19.pdf
+make isomorphien  # nur isomorphien.pdf
+make clean        # entfernt Aux-Dateien (*.aux, *.log, ...)
+make distclean    # entfernt zusätzlich beide PDFs
 ```
 
 Voraussetzungen: eine TeX-Distribution mit `latexmk` und `pdflatex`
@@ -40,9 +49,26 @@ Voraussetzungen: eine TeX-Distribution mit `latexmk` und `pdflatex`
 ## Benötigte LaTeX-Pakete
 
 `amsmath`, `amssymb`, `amsthm`, `babel` (mit `ngerman`), `booktabs`,
-`array`, `geometry`, `enumitem`, `fontenc` (T1), `inputenc` (utf8).
+`array`, `geometry`, `enumitem`, `fontenc` (T1), `inputenc` (utf8),
+`tikz` mit Bibliotheken `positioning`, `calc`, `arrows.meta`.
 
 Alle Pakete sind in einer Standard-TeX-Live-Installation enthalten.
+
+## Map of Content
+
+Siehe [`MoC.md`](MoC.md) für den interaktiven Einstieg. Jede Disziplin
+in `disciplines/` enthält denselben Mermaid-Graphen — topologische
+Übereinstimmung beweist die Isomorphie.
+
+Aktuell abgebildet:
+
+- **Math/Phys**: Quantenmechanik, Kategorientheorie, Thermodynamik,
+  Signaltheorie, Kontrolltheorie.
+- **Math/Phys (vertieft)**: Hamiltonsche Mechanik, Allgemeine
+  Relativität, Stochastik/Markov.
+- **Struktur**: Logik, Differentialgeometrie, Graphentheorie.
+- **Anwendungen**: Neuronale Netze/Transformer, Spieltheorie.
+- **Geistes-/Kultur**: Hegel-Dialektik, Musiktheorie.
 
 ## Notationskonvention
 

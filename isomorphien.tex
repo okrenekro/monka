@@ -1,0 +1,457 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,arrows.meta}
+
+\geometry{margin=1.5cm}
+
+\tikzset{
+  wirkung/.style={draw,circle,fill=red!12,thick,
+    inner sep=1pt,minimum size=1.5cm,align=center,
+    font=\tiny},
+  struktur/.style={draw,circle,fill=blue!12,thick,
+    inner sep=1pt,minimum size=1.5cm,align=center,
+    font=\tiny},
+  fix/.style={draw,circle,fill=yellow!35,very thick,
+    inner sep=2pt,minimum size=1.7cm,align=center,
+    font=\footnotesize\bfseries},
+  kopplung/.style={very thick,gray!75},
+  welle/.style={-{Latex[length=1.6mm]},thin,gray!45},
+  klabel/.style={midway,sloped,font=\scriptsize,fill=white,
+    inner sep=1pt}
+}
+
+%% --------- 14+1 Knoten zeichnen, Labels via \def ---------
+\newcommand{\drawnodes}{%
+  \node[fix]      (P19) at (0,0)        {\Plabel};
+  \node[wirkung]  (A1)  at (90:3.4)     {\AOne};
+  \node[wirkung]  (A2)  at (64.286:3.4) {\ATwo};
+  \node[wirkung]  (A3)  at (38.571:3.4) {\AThree};
+  \node[wirkung]  (A4)  at (12.857:3.4) {\AFour};
+  \node[wirkung]  (A5)  at (-12.857:3.4){\AFive};
+  \node[wirkung]  (A6)  at (-38.571:3.4){\ASix};
+  \node[wirkung]  (A9)  at (-64.286:3.4){\ANine};
+  \node[struktur] (A14) at (270:3.4)    {\AFourteen};
+  \node[struktur] (A12) at (244.286:3.4){\ATwelve};
+  \node[struktur] (A8)  at (218.571:3.4){\AEight};
+  \node[struktur] (A10) at (192.857:3.4){\ATen};
+  \node[struktur] (A7)  at (167.143:3.4){\ASeven};
+  \node[struktur] (A11) at (141.429:3.4){\AEleven};
+  \node[struktur] (A13) at (115.714:3.4){\AThirteen};
+}
+
+%% --------- 7 Kopplungen + 14 Wellen zeichnen ---------
+\newcommand{\drawedges}{%
+  \draw[kopplung] (A1)  -- node[klabel]{I}   (A14);
+  \draw[kopplung] (A2)  -- node[klabel]{II}  (A12);
+  \draw[kopplung] (A3)  -- node[klabel]{III} (A8);
+  \draw[kopplung] (A4)  -- node[klabel]{IV}  (A10);
+  \draw[kopplung] (A5)  -- node[klabel]{V}   (A7);
+  \draw[kopplung] (A6)  -- node[klabel]{VI}  (A11);
+  \draw[kopplung] (A9)  -- node[klabel]{VII} (A13);
+  \foreach \n in {1,2,3,4,5,6,7,8,9,10,11,12,13,14}{%
+    \draw[welle] (A\n) -- (P19);
+  }
+}
+
+\newcommand{\wheel}{\drawnodes\drawedges}
+
+\title{Invariante 19 -- Isomorphien-Atlas:\\
+  Acht Disziplinen, derselbe Graph}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Lesehilfe}
+
+Jede Tafel zeigt denselben Graphen:
+\begin{itemize}\itemsep0pt
+  \item \textbf{15 Knoten} -- 14 Axiome $A_1,\dots,A_{14}$ am Umfang,
+    Fixpunkt $P_{19}$ im Zentrum.
+  \item \textbf{7 Kopplungen} (graue Durchmesser, rom.\ Ziffern I--VII)
+    -- die Dual-Verbindungen Wirkung $\leftrightarrow$ Struktur.
+  \item \textbf{14 Wellen} (Pfeile zum Zentrum) -- die Eins-Eigenwert-
+    Propagation $A_k \to P_{19}$.
+  \item \textbf{7 Felder} -- die durch je eine Kopplung definierten
+    Sektoren (rot/blau-getrennt; rot = Wirkung, blau = Struktur).
+\end{itemize}
+
+Nur die Knotenbeschriftungen wechseln zwischen den Tafeln.
+\textbf{Identische Topologie $=$ Isomorphie.}
+
+\newpage
+
+%% =========================================================
+%% 1. MATHEMATIK / LINEARE ALGEBRA (Original)
+%% =========================================================
+\section*{Mathematik / Lineare Algebra}
+\def\Plabel{$P_{19}$}
+\def\AOne{$\ker(A)$\\$\neq\{0\}$}
+\def\ATwo{$V\otimes W$}
+\def\AThree{$\mathrm{tr}(S^{-1}AS)$}
+\def\AFour{$Av\!=\!\lambda v$}
+\def\AFive{$Q\!\in\!O(n)$}
+\def\ASix{$x^{\top}\!Ax$}
+\def\ANine{$\dim V\!=\!n$}
+\def\AFourteen{$\sum\Pi_i\!=\!I$}
+\def\ATwelve{$(sI{-}A)^{-1}$}
+\def\AEight{$A^{\ast}\!=\!A$}
+\def\ATen{$\lambda_i\!=\!\lambda_j$}
+\def\ASeven{$\sum a_{ii}$}
+\def\AEleven{$\langle u,v\rangle$}
+\def\AThirteen{$\mathrm{rg}/\min$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 2. QUANTENMECHANIK
+%% =========================================================
+\section*{Quantenmechanik}
+\def\Plabel{$|0\rangle$}
+\def\AOne{$a|0\rangle\!=\!0$}
+\def\ATwo{$\mathcal H_A\!\otimes\!\mathcal H_B$}
+\def\AThree{$\mathrm{tr}(U^{\dagger}\!\hat A U)$}
+\def\AFour{$\hat H|\psi\rangle\!=\!E|\psi\rangle$}
+\def\AFive{$U^{\dagger}U\!=\!I$}
+\def\ASix{$\langle\psi|\hat H|\psi\rangle$}
+\def\ANine{$\dim\mathcal H\!=\!d$}
+\def\AFourteen{$\sum|n\rangle\!\langle n|\!=\!I$}
+\def\ATwelve{$(E{-}\hat H)^{-1}$}
+\def\AEight{$\hat A^{\dagger}\!=\!\hat A$}
+\def\ATen{Entartung}
+\def\ASeven{$\mathrm{tr}(\rho\hat H)$}
+\def\AEleven{$\langle\psi|\phi\rangle$}
+\def\AThirteen{$\mathrm{tr}(\rho^2)$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 3. KATEGORIENTHEORIE
+%% =========================================================
+\section*{Kategorientheorie}
+\def\Plabel{Term.\\Obj.\,$\mathbf{1}$}
+\def\AOne{Null-Obj.}
+\def\ATwo{$\mathcal C\otimes\mathcal D$}
+\def\AThree{$F$-Invar.}
+\def\AFour{$\alpha\!\in\!\mathrm{End}$}
+\def\AFive{Iso $\mathcal C\!\cong\!\mathcal D$}
+\def\ASix{Adjunktion}
+\def\ANine{$|\mathrm{Ob}(\mathcal C)|$}
+\def\AFourteen{$\bigoplus\!=\!\mathrm{id}$}
+\def\ATwelve{$(\mathrm{id}{-}F)^{-1}$}
+\def\AEight{Dagger $\mathcal C^{\dagger}$}
+\def\ATen{Natürl.\,Iso}
+\def\ASeven{$\mathrm{tr}$-Klasse}
+\def\AEleven{$\mathrm{Hom}(-,-)$}
+\def\AThirteen{$\mathrm{rg}(\mathrm{Hom})$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 4. THERMODYNAMIK
+%% =========================================================
+\section*{Thermodynamik}
+\def\Plabel{Gleich-\\gewicht}
+\def\AOne{$T\!\to\!0$}
+\def\ATwo{$A\!\otimes\!B$}
+\def\AThree{$U(S,V)$}
+\def\AFour{$\mu$ chem.}
+\def\AFive{adia\-bat.}
+\def\ASix{$F\!=\!U{-}TS$}
+\def\ANine{$f$ DOF}
+\def\AFourteen{$Z\!=\!\sum e^{-\beta E}$}
+\def\ATwelve{$\chi(\omega)$}
+\def\AEight{Maxwell-Rel.}
+\def\ATen{Phasen-\\koexist.}
+\def\ASeven{$\dot Q$}
+\def\AEleven{$\langle E\rangle\!=\!\int\! E\rho dE$}
+\def\AThirteen{$s/k$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 5. SIGNALTHEORIE / FOURIER
+%% =========================================================
+\section*{Signaltheorie / Fourier}
+\def\Plabel{DC /\\stat.}
+\def\AOne{$x\!\equiv\!0$}
+\def\ATwo{$x\star y$}
+\def\AThree{Parseval}
+\def\AFour{$e^{i\omega t}$}
+\def\AFive{Allpass}
+\def\ASix{$\int|x|^2 dt$}
+\def\ANine{Nyquist}
+\def\AFourteen{$\sum\psi_n\!=\!\delta$}
+\def\ATwelve{$H(s)$}
+\def\AEight{Lin-Phase}
+\def\ATen{Resonanz}
+\def\ASeven{$\hat X(0)$}
+\def\AEleven{$\langle x,y\rangle$}
+\def\AThirteen{$\mathrm{SD}(\omega)$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 6. KONTROLLTHEORIE
+%% =========================================================
+\section*{Kontrolltheorie}
+\def\Plabel{$x^{*}$ G.G.}
+\def\AOne{Steuerb.-\\Defekt}
+\def\ATwo{$\Sigma_1\!\otimes\!\Sigma_2$}
+\def\AThree{Realis.-Iso}
+\def\AFour{Pol $\lambda$}
+\def\AFive{symplekt.}
+\def\ASix{$\int x^{\top}\!Qx\, dt$}
+\def\ANine{Ordnung $n$}
+\def\AFourteen{Modal-\\Zerlegung}
+\def\ATwelve{$(sI{-}A)^{-1}\!B$}
+\def\AEight{$P\!=\!P^{\top}\!\succ\!0$}
+\def\ATen{Jordan-Bl.}
+\def\ASeven{Lyapunov-\\Spur}
+\def\AEleven{$\langle x,y\rangle_Q$}
+\def\AThirteen{$\mathrm{rg}(\mathcal C)/\mathrm{rg}(\mathcal O)$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 7. LOGIK
+%% =========================================================
+\section*{Logik}
+\def\Plabel{$\top$ / $Y$}
+\def\AOne{$\bot$}
+\def\ATwo{$\varphi\wedge\psi$}
+\def\AThree{Subst.-Inv.}
+\def\AFour{$v(\varphi)$}
+\def\AFive{Permutation}
+\def\ASix{Beweis-Form}
+\def\ANine{Stelligk. $n$}
+\def\AFourteen{$\vdash\!=\!\models$}
+\def\ATwelve{$\square^{-1}$}
+\def\AEight{$\neg\neg\varphi\!\leftrightarrow\!\varphi$}
+\def\ATen{$\varphi\!\equiv\!\psi$}
+\def\ASeven{$|\mathrm{Mod}(\varphi)|$}
+\def\AEleven{$\sum\varphi(I)\psi(I)$}
+\def\AThirteen{Sat-Dichte}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 8. DIFFERENTIALGEOMETRIE
+%% =========================================================
+\section*{Differentialgeometrie}
+\def\Plabel{Harm.\\Form}
+\def\AOne{$\ker(df)$}
+\def\ATwo{$T^{*}\!M\!\otimes\!TM$}
+\def\AThree{Diffeo-Inv.}
+\def\AFour{Killing-V.}
+\def\AFive{$\varphi^{*}\!g\!=\!g$}
+\def\ASix{$g_{ij}x^{i}x^{j}$}
+\def\ANine{$\dim M\!=\!n$}
+\def\AFourteen{Hodge $\sum$}
+\def\ATwelve{$(\Delta{-}\lambda)^{-1}$}
+\def\AEight{$T_{(ij)}$}
+\def\ATen{Holonomie}
+\def\ASeven{$\nabla\!\cdot\!X$}
+\def\AEleven{$\int\!\omega\wedge\!*\eta$}
+\def\AThirteen{$\mathrm{rg}(\omega)$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 9. GRAPHENTHEORIE
+%% =========================================================
+\section*{Graphentheorie}
+\def\Plabel{Stat.\\Vert.}
+\def\AOne{isol.\\Knoten}
+\def\ATwo{$G\!\otimes\!H$}
+\def\AThree{Spektral-Iso}
+\def\AFour{$L$-Eigenv.}
+\def\AFive{$\sigma\!\in\!\mathrm{Aut}(G)$}
+\def\ASix{$x^{\top}\!Lx$}
+\def\ANine{$|V|\!=\!n$}
+\def\AFourteen{$\sum v_i v_i^{\top}\!=\!I$}
+\def\ATwelve{$(sI{-}L)^{-1}$}
+\def\AEight{$L\!=\!L^{\top}$}
+\def\ATen{Spektral-\\Vielfachh.}
+\def\ASeven{$\sum\deg(v)$}
+\def\AEleven{$\sum f(v)g(v)$}
+\def\AThirteen{$\mathrm{rg}(L)/(n{-}1)$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 10. HAMILTONSCHE MECHANIK
+%% =========================================================
+\section*{Hamiltonsche Mechanik}
+\def\Plabel{stab.\\GG-Bahn}
+\def\AOne{$[H,\cdot]\!=\!0$\\Erhaltung}
+\def\ATwo{$H_{AB}$ Koppl.}
+\def\AThree{sympl.\,Inv.}
+\def\AFour{Aktion $I_k$}
+\def\AFive{kanon.\,Trafo}
+\def\ASix{$\tfrac12 p^{\top}\!M^{-1}p$}
+\def\ANine{$f$ Freiheits-\\grade}
+\def\AFourteen{Aktion-\\Winkel}
+\def\ATwelve{Green-Op.}
+\def\AEight{$M\!=\!M^{\top}$}
+\def\ATen{Reson.\,Tori}
+\def\ASeven{$\nabla\!\cdot\!v\!=\!0$\\(Liouville)}
+\def\AEleven{$\omega(X,Y)$}
+\def\AThirteen{Tori-Maß}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 11. ALLGEMEINE RELATIVITÄT
+%% =========================================================
+\section*{Allgemeine Relativitätstheorie}
+\def\Plabel{Killing-\\Fixpunkt}
+\def\AOne{Singularität\\$r\!=\!0$}
+\def\ATwo{$T_{\mu\nu}\!\otimes\!T^{\mu\nu}$}
+\def\AThree{allg.\,Kov.}
+\def\AFour{Krümm.-EW}
+\def\AFive{$\Lambda\!\in\!SO(1,3)$}
+\def\ASix{$ds^{2}\!=\!g_{\mu\nu}dx^{\mu}dx^{\nu}$}
+\def\ANine{dim$\!=\!4$}
+\def\AFourteen{Lösungs-\\Basis}
+\def\ATwelve{$(\Box{-}m^{2})^{-1}$}
+\def\AEight{$T_{\mu\nu}\!=\!T_{\nu\mu}$}
+\def\ATen{entartete EW}
+\def\ASeven{$R$ Ricci}
+\def\AEleven{$\int T_{\mu\nu}T^{\mu\nu}\!\sqrt{-g}$}
+\def\AThirteen{$\mathrm{rg}(R_{\mu\nu})$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 12. MARKOV-KETTEN
+%% =========================================================
+\section*{Stochastik / Markov-Ketten}
+\def\Plabel{$\pi\!=\!\pi P$}
+\def\AOne{absorb.\\Zustand}
+\def\ATwo{$P\!\otimes\!Q$}
+\def\AThree{$\mathrm{tr}(P)$ inv.}
+\def\AFour{$|\lambda|\!\le\!1$}
+\def\AFive{doppel-\\stochastisch}
+\def\ASix{$x^{\top}\!Px$}
+\def\ANine{$|S|\!=\!n$}
+\def\AFourteen{Spektral-\\zerlegung}
+\def\ATwelve{$(I{-}sP)^{-1}$}
+\def\AEight{Detailed\,Bal.}
+\def\ATen{Periodizität}
+\def\ASeven{$\sum p_{ii}$}
+\def\AEleven{$\langle f,g\rangle_{\pi}$}
+\def\AThirteen{Mischzeit-\\Rang}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 13. NEURONALE NETZE / TRANSFORMER
+%% =========================================================
+\section*{Neuronale Netze / Transformer}
+\def\Plabel{$W^{*}$ Lern-\\Fixpunkt}
+\def\AOne{Tot-Neuron\\ReLU$\!=\!0$}
+\def\ATwo{Multi-Head\\$Q\!\otimes\!K$}
+\def\AThree{Token-Perm.-\\Inv.}
+\def\AFour{$W$-Eigenmode}
+\def\AFive{orth.\,Init}
+\def\ASix{$x^{\top}\!Hx$ Loss}
+\def\ANine{$d$ Embed-Dim}
+\def\AFourteen{$\sum\!\mathrm{softmax}\!=\!1$}
+\def\ATwelve{Bellman /\\$(sI{-}W)^{-1}$}
+\def\AEight{sym.\\Attention}
+\def\ATen{Head-Redund.}
+\def\ASeven{Bias / DC}
+\def\AEleven{$\mathrm{softmax}\!\left(\!\tfrac{\langle Q,K\rangle}{\sqrt d}\!\right)$}
+\def\AThirteen{$\mathrm{rg}(QK^{\top})$}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 14. SPIELTHEORIE
+%% =========================================================
+\section*{Spieltheorie}
+\def\Plabel{$\sigma^{*}$ Nash-GG}
+\def\AOne{dominiert}
+\def\ATwo{$G\!\otimes\!G'$}
+\def\AThree{Strat.-Iso-Inv.}
+\def\AFour{$\mathrm{BR}(\sigma)$}
+\def\AFive{Spieler-Perm.}
+\def\ASix{$\sigma^{\top}\!A\sigma$}
+\def\ANine{$n$ Spieler}
+\def\AFourteen{$\sum\sigma_i\!=\!1$}
+\def\ATwelve{BR-Resolvente}
+\def\AEight{$A\!=\!A^{\top}$\\sym.\,Spiel}
+\def\ATen{mehrf.\,Nash}
+\def\ASeven{$\sum$ Auszahlung}
+\def\AEleven{$\langle\sigma_i,\sigma_j\rangle$}
+\def\AThirteen{Support-\\Rang}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 15. HEGEL-DIALEKTIK
+%% =========================================================
+\section*{Hegel-Dialektik}
+\def\Plabel{Abs.\\Geist}
+\def\AOne{Negation\\(Aufhebung)}
+\def\ATwo{Subj.-Obj.-\\Bezug}
+\def\AThree{Inv.\,unter\\Sublimation}
+\def\AFour{best.\,Begriff}
+\def\AFive{Reflexion}
+\def\ASix{Bewegungs-\\Form}
+\def\ANine{Dialektik-\\Stufen}
+\def\AFourteen{Abs.\\Wissen}
+\def\ATwelve{Rückkehr\\z.\,Selbst}
+\def\AEight{Identitäts-\\gesetz}
+\def\ATen{hist.\\Wiederh.}
+\def\ASeven{Selbst-\\durchsetz.}
+\def\AEleven{Vermittlung}
+\def\AThirteen{Konkret.\\Universale}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\newpage
+
+%% =========================================================
+%% 16. MUSIKTHEORIE
+%% =========================================================
+\section*{Musiktheorie}
+\def\Plabel{Tonika\\(Grundton)}
+\def\AOne{Pause}
+\def\ATwo{Akkord}
+\def\AThree{Transp.-Inv.}
+\def\AFour{$f_{0}$ Eigen-\\frequenz}
+\def\AFive{Inversion}
+\def\ASix{Klang-\\Energie}
+\def\ANine{12 Töne}
+\def\AFourteen{Quinten-\\zirkel}
+\def\ATwelve{Cadenza}
+\def\AEight{sym.\,Akkord}
+\def\ATen{Oktave/\\Quinte}
+\def\ASeven{Grundton-\\Anteil}
+\def\AEleven{Konsonanz-\\$\langle a,b\rangle$}
+\def\AThirteen{Pent /\\Diaton}
+\begin{center}\begin{tikzpicture}[scale=1.0]\wheel\end{tikzpicture}\end{center}
+
+\end{document}
