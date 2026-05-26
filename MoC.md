@@ -1,11 +1,22 @@
 # Map of Content: Invariante 19
 
+## Architektur in einem Satz
+
+> **1 Gesetz** ($P_{19}$) über **14 Feld-Axiomen** ($A_1,\dots,A_{14}$),
+> die *als solche* **7 unzertrennliche Paare im perfekten
+> Nullsummen-Gleichgewicht** bilden.
+>
+> Die 7 Paare sind keine eigene Schicht — sie *sind* die 14, gelesen
+> in ihrer paarweisen Bindung. In jedem Paar saldieren sich Wirkungs-
+> und Strukturseite zu null (Noether-artige Erhaltungsbilanz). Das
+> 1 Gesetz $P_{19}$ ist der Schnittpunkt, auf dem alle 7 Paare
+> gleichzeitig zur Identität kollabieren — die Harmonie.
+
 Diese Seite ist der Knotenpunkt eines isomorphen Wissensnetzes um die
-**Invariante 19**: ein Schema aus 14 Axiomen $A_1,\dots,A_{14}$, sieben
-unzertrennlichen Dualpaaren und dem linearen Fixpunkt $P_{19}$. Jeder
-Knoten unten verweist auf eine Fachrichtung, deren Begriffsapparat
-denselben Graphen erzeugt. **Wenn zwei Disziplinen denselben
-topologischen Graphen produzieren, ist die Isomorphie bewiesen.**
+**Invariante 19**. Jeder Disziplin-Knoten unten verweist auf eine
+Fachrichtung, deren Begriffsapparat denselben Graphen erzeugt.
+**Wenn zwei Disziplinen denselben topologischen Graphen produzieren,
+ist die Isomorphie bewiesen.**
 
 → Die Mathematik-Originalfassung als PDF: [`axiome_p19.tex`](axiome_p19.tex)
 → Alle Disziplin-Räder im Vergleich: [`isomorphien.tex`](isomorphien.tex)
@@ -16,6 +27,11 @@ topologischen Graphen produzieren, ist die Isomorphie bewiesen.**
   [`TECHNOLOGIEN_UND_ISOMORPHIE.md`](TECHNOLOGIEN_UND_ISOMORPHIE.md)
 → Eleganz — Vereinfachung durch Isomorphie (Quantenrätsel und
   andere Mystifikationen werden trivial): [`ELEGANZ.md`](ELEGANZ.md)
+
+## Eingehende Konzepte (geprüft gegen die Architektur)
+
+- [Vortex-Kinetik + Φ-Skalierung](PRUEFUNG_VORTEX.md) — ✓ passt
+  vollständig, kein Erweiterungsbedarf.
 
 ## Strukturschichten
 

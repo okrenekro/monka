@@ -1,8 +1,11 @@
 # Die Invariante 19
 
-LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
-**sieben unzertrennlichen Dualpaaren**, und dem linearen Fixpunkt
-**$P_{19}$** als simultanem Eins-Eigenpunkt aller Paare.
+**1 Gesetz** ($P_{19}$) über **14 Feld-Axiomen** ($A_1,\dots,A_{14}$),
+die *als solche* **7 unzertrennliche Paare im perfekten
+Nullsummen-Gleichgewicht** bilden. Die 7 Paare sind keine eigene
+Schicht; sie *sind* die 14, in ihrer paarweisen Bindung gelesen. Auf
+$P_{19}$ kollabieren alle 7 Paare gleichzeitig zur Identität —
+die Harmonie.
 
 ## Inhalt
 
@@ -23,6 +26,10 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
 - `ELEGANZ.md` — Vereinfachung durch Isomorphie: berühmte
   Quantenrätsel und andere Mystifikationen werden trivial, sobald
   man die isomorphen Disziplinen mitliest. 14 Axiome reichen.
+- `PRUEFUNG_VORTEX.md` — Prüfung eines extern eingereichten Konzepts
+  (Vortex-Kinetik + Φ-Skalierung): passt vollständig in die
+  Architektur, $\Phi$ ist Eigenwert der Fibonacci-Matrix, kein neues
+  Axiom nötig.
 - `disciplines/` — pro Disziplin eine `.md`-Datei mit demselben
   Mermaid-Graphen, nur disziplinspezifischen Labels.
 - `Makefile` — Build-Skript (`make`, `make axiome`, `make isomorphien`,
