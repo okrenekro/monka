@@ -17,6 +17,9 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
   Rang-Nullitäts-Satz etc.).
 - `PAIRS.md` — die 7 Paare horizontal: pro Paar eine Tabelle aller
   22 Disziplin-Realisierungen.
+- `TECHNOLOGIEN_UND_ISOMORPHIE.md` — Technologie-Karte aller 22
+  Disziplinen, Technologie$\times$Axiom-Matrix und sieben
+  Konsequenzen der universellen Isomorphie.
 - `disciplines/` — pro Disziplin eine `.md`-Datei mit demselben
   Mermaid-Graphen, nur disziplinspezifischen Labels.
 - `Makefile` — Build-Skript (`make`, `make axiome`, `make isomorphien`,

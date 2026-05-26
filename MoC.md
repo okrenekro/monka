@@ -12,6 +12,8 @@ topologischen Graphen produzieren, ist die Isomorphie bewiesen.**
 → Die 7 Bijektionen in formaler Mathematik (aus den 14 Formeln):
   [`BIJEKTION.md`](BIJEKTION.md)
 → Die 7 Paare horizontal über alle Disziplinen: [`PAIRS.md`](PAIRS.md)
+→ Technologien aus den Disziplinen & Bedeutung der Isomorphie:
+  [`TECHNOLOGIEN_UND_ISOMORPHIE.md`](TECHNOLOGIEN_UND_ISOMORPHIE.md)
 
 ## Strukturschichten
 
