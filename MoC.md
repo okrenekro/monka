@@ -9,6 +9,9 @@ topologischen Graphen produzieren, ist die Isomorphie bewiesen.**
 
 → Die Mathematik-Originalfassung als PDF: [`axiome_p19.tex`](axiome_p19.tex)
 → Alle Disziplin-Räder im Vergleich: [`isomorphien.tex`](isomorphien.tex)
+→ Die 7 Bijektionen in formaler Mathematik (aus den 14 Formeln):
+  [`BIJEKTION.md`](BIJEKTION.md)
+→ Die 7 Paare horizontal über alle Disziplinen: [`PAIRS.md`](PAIRS.md)
 
 ## Strukturschichten
 

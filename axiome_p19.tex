@@ -189,4 +189,103 @@ Eigenschaften:
     fallen --- die Invariante~19.
 \end{enumerate}
 
+\bigskip
+\section*{Die Bijektion zeigt sich selbst}
+
+Für jedes der sieben Paare existiert ein klassisches Theorem der
+linearen Algebra bzw.\ Funktionalanalysis, das die beiden
+Originalformeln direkt aufeinander abbildet. Die Bijektion ist
+keine Behauptung, sondern eine Identität.
+
+\subsection*{I.\ Grenze $\leftrightarrow$ Vollständigkeit
+  (Spektralzerlegung)}
+Mit $A = \sum_i \lambda_i \Pi_i$ ist $\Pi_0$ die Projektion auf
+$\ker(A)$:
+\[
+  \ker(A)\neq\{0\}
+  \;\;\Longleftrightarrow\;\;
+  \Pi_0 \neq 0
+  \;\;\Longleftrightarrow\;\;
+  0 \in \mathrm{spec}(A).
+\]
+Die Frage nach dem Kern ist die Frage nach einem Term der
+Vollständigkeitszerlegung.
+
+\subsection*{II.\ Aktion $\leftrightarrow$ Reflexion
+  (Laplace-Dualität)}
+Die Resolvente ist die Laplace-Transformierte des Operator-
+exponentials,
+\[
+  (sI - A)^{-1} \;=\; \int_0^\infty e^{-st}\,e^{tA}\,dt,
+\]
+und für Tensorkopplung gilt
+$e^{t(A\oplus B)} = e^{tA}\otimes e^{tB}$.
+Tensor zeitlich, Resolvente spektral --- dieselbe Operation,
+durch $\mathcal{L}$ verbunden.
+
+\subsection*{III.\ Ähnlichkeit $\leftrightarrow$ Selbstadjungiertheit
+  (Spektralsatz)}
+$\mathrm{tr}(S^{-1} A S) = \mathrm{tr}(A)$ gilt für jedes
+$S\in\mathrm{GL}(n)$ (zyklische Spureigenschaft). Der Spektralsatz
+verschärft: für $A^\ast = A$ existiert eine unitäre $U$ mit
+\[
+  U^\ast A\, U = \mathrm{diag}(\lambda_1,\dots,\lambda_n),
+  \qquad \lambda_i \in \mathbb{R},
+\]
+so dass $\mathrm{tr}(A) = \sum_i \lambda_i$ reell ist.
+Ähnlichkeitsinvarianz und Selbstadjungiertheit drücken dieselbe
+Symmetrie aus.
+
+\subsection*{IV.\ Takt $\leftrightarrow$ Resonanz (Eigenraum)}
+Die Eigenwertgleichung $A v = \lambda v$ definiert
+\[
+  E_\lambda \;=\; \ker(A - \lambda I).
+\]
+Vielfachheit ist $\dim E_\lambda \geq 2$ --- also die Existenz
+mehrerer linear unabhängiger Lösungen derselben Gleichung.
+Singular- und Pluralform desselben Begriffs.
+
+\subsection*{V.\ Wirbel $\leftrightarrow$ Quelle (Lie-Algebra
+  von $O(n)$)}
+Eine Bahn $Q(t) = e^{tA}$ liegt in $O(n)$ genau dann, wenn
+$A^\top = -A$. Antisymmetrie zwingt $a_{ii} = -a_{ii}$, also
+$\mathrm{tr}(A) = 0$:
+\[
+  Q^\top Q = I \;\;\Longleftrightarrow\;\; A^\top = -A
+  \;\;\Longrightarrow\;\; \mathrm{tr}(A) = 0.
+\]
+Längentreue Rotation und Spurlosigkeit sind dieselbe Bedingung
+am Generator (Helmholtz: Wirbel ohne Quelle).
+
+\subsection*{VI.\ Gefälle $\leftrightarrow$ Akkumulation
+  (Polarisationsidentität)}
+Für symmetrisches $A$ und $B(u,v) = u^\top A v$ ist
+$\Phi(x) = B(x,x)$ und
+\[
+  B(u,v) \;=\; \tfrac14\bigl(\Phi(u+v) - \Phi(u-v)\bigr).
+\]
+Quadratische Form und Skalarprodukt sind algebraisch derselbe
+Datensatz: Diagonale bzw.\ Polarisation.
+
+\subsection*{VII.\ Stufen $\leftrightarrow$ Kontinuum
+  (Rang-Nullitäts-Satz)}
+Für $A\colon V\to W$ mit $\dim V = n$, $\dim W = m$ gilt
+\[
+  n \;=\; \mathrm{rg}(A) + \dim\ker(A),
+  \qquad
+  \rho \;=\; \frac{\mathrm{rg}(A)}{\min(n,m)}.
+\]
+Die diskrete Dimension und die kontinuierliche Dichte teilen
+sich denselben Bruch --- die Bijektion ist eine Division.
+
+\bigskip
+\noindent\textbf{Konsequenz für $P_{19}$.}
+Ein Objekt, das jede der 14 Axiom-Operationen auf den Eigenwert $1$
+abbildet, sammelt alle sieben Brücken in einem Schnittpunkt
+$$
+  P_{19} \;\in\; \bigcap_{k=1}^{14}\,\{\,x : A_k(x) = 1\cdot x\,\}.
+$$
+Auf diesem Punkt fällt die Wirkung mit der Struktur zusammen, weil
+die Bijektion zur Identität degeneriert.
+
 \end{document}

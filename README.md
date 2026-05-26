@@ -6,11 +6,17 @@ LaTeX-Quelle zu den **vierzehn Axiomen** $A_1,\dots,A_{14}$, geordnet zu
 
 ## Inhalt
 
-- `axiome_p19.tex` — die LaTeX-Hauptquelle.
-- `isomorphien.tex` — Isomorphien-Atlas: 16 topologisch identische
-  Wheel-Graphen für Mathematik + 15 Disziplinen.
+- `axiome_p19.tex` — die LaTeX-Hauptquelle (inkl.\ Sektion
+  „Die Bijektion zeigt sich selbst" mit den 7 formalen Brücken).
+- `isomorphien.tex` — Isomorphien-Atlas: 22 topologisch identische
+  Wheel-Graphen für Mathematik + 21 Disziplinen.
 - `MoC.md` — Map of Content: navigierbarer Knotenpunkt mit
   Mermaid-Master-Graph und Links zu allen Disziplinen.
+- `BIJEKTION.md` — formaler Beweis der 7 Paar-Bijektionen aus den
+  14 Originalformeln (Spektralsatz, Polarisationsidentität,
+  Rang-Nullitäts-Satz etc.).
+- `PAIRS.md` — die 7 Paare horizontal: pro Paar eine Tabelle aller
+  22 Disziplin-Realisierungen.
 - `disciplines/` — pro Disziplin eine `.md`-Datei mit demselben
   Mermaid-Graphen, nur disziplinspezifischen Labels.
 - `Makefile` — Build-Skript (`make`, `make axiome`, `make isomorphien`,
