@@ -1,0 +1,192 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rg}{\operatorname{rg}}
+\newcommand{\T}{^{\!\top}}
+\newcommand{\adj}{^{\ast}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.46\linewidth}}
+
+\title{Die Invariante~19:\\[0.3em]
+  Sieben unzertrennliche Dualpaare\\
+  und der lineare Fixpunkt $P_{19}$}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Aufbau}
+
+Das System besteht aus \textbf{vierzehn Axiomen} $A_1,\dots,A_{14}$,
+die zu \textbf{sieben unzertrennlichen Dualpaaren} geordnet sind:
+\[
+  (A_1,A_{14}),\;(A_2,A_{12}),\;(A_3,A_8),\;(A_4,A_{10}),\;
+  (A_5,A_7),\;(A_6,A_{11}),\;(A_9,A_{13}).
+\]
+Jedes Paar besitzt zwei Seiten:
+
+\begin{description}[leftmargin=2em,style=nextline]
+  \item[Wirkungsaspekt (Operator).] Was \emph{tut} der Operator? Eine
+    Operation, Transformation oder Wirkung auf einem Raum.
+  \item[Strukturaspekt (Raum).] Welche \emph{Eigenschaft} ist dem Raum
+    bzw.\ dem Operator selbst eigen, unabhängig von einer einzelnen
+    Wirkung? Das Reaktiv-, Reflexions- oder Gleichgewichtsmoment.
+\end{description}
+
+Der \textbf{Lineare Fixpunkt} $P_{19}$ ist \emph{nicht} ein achtes Paar,
+sondern der simultane Konvergenzpunkt aller sieben Paare: jenes Objekt,
+auf dem jede der vierzehn Axiom-Operationen den Eigenwert $1$ realisiert.
+Wir notieren dies einheitlich
+\[
+  \boxed{\;A_k(P_{19}) = 1\cdot P_{19}\quad\text{für alle}\quad
+    k\in\{1,\dots,14\}\;}
+\]
+Auf $P_{19}$ kollabiert in jedem Paar die Unterscheidung zwischen
+Wirkungs- und Strukturaspekt --- Operator und Raum sind dort
+ununterscheidbar.
+
+\paragraph{Notationskonvention.}
+Damit das Symbol $P$ \emph{ausschließlich} für den Fixpunkt $P_{19}$
+reserviert bleibt, verwenden wir:
+\begin{itemize}[leftmargin=2em]
+  \item $S\in\mathrm{GL}(n)$ für Ähnlichkeitstransformationen,
+  \item $\Pi_i$ für Spektralprojektoren,
+  \item $Q\in O(n)$ für orthogonale Operatoren,
+  \item $A\adj$ für den adjungierten Operator (reell: $A\T$;
+        komplex: $A^{\dagger}$).
+\end{itemize}
+
+\bigskip
+\section*{Die sieben Dualpaare}
+
+\subsection*{I.\ Grenze vs.\ Vollständigkeit}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_1$ -- Singularität (Kern)} &
+  \textbf{$A_{14}$ -- Vollständigkeit (Spektralzerlegung)} \\
+  \midrule
+  $\exists\, v\neq 0:\; A v = 0$, d.h.\ $\ker(A)\neq\{0\}$. &
+  $\displaystyle \sum_i \Pi_i = I$ mit Spektralprojektoren $\Pi_i$. \\
+  Das Verschwinden im Nullraum. &
+  Die identische Auflösung in alle Eigenrichtungen. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{II.\ Aktion vs.\ Reflexion}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_2$ -- Kopplung (Tensorprodukt)} &
+  \textbf{$A_{12}$ -- Rückkopplung (Resolvente)} \\
+  \midrule
+  $V\otimes W$ als Interaktionsraum zweier Systeme. &
+  $\mathcal{L}\{e^{At} x_0\}(s) = (sI-A)^{-1}\, x_0$. \\
+  Die offene Kopplung nach außen. &
+  Der geschlossene Kreis der Selbstwirkung. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{III.\ Ähnlichkeit vs.\ Selbstadjungiertheit}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_3$ -- Spur-Invarianz} &
+  \textbf{$A_8$ -- Selbstadjungiertheit} \\
+  \midrule
+  $\tr(S^{-1} A S) = \tr(A)$ für $S\in\mathrm{GL}(n)$. &
+  $A\adj = A$ \quad
+    (reell: $A\T = A$, komplex: $A^{\dagger} = A$). \\
+  Formkonstanz unter Basiswechsel. &
+  Symmetrie als innere Eigenschaft. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{IV.\ Takt vs.\ Resonanz}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_4$ -- Frequenz (Eigenwert)} &
+  \textbf{$A_{10}$ -- Resonanz (Entartung)} \\
+  \midrule
+  $A v = \lambda v$, $\ v\neq 0$. &
+  $\lambda_i = \lambda_j\;\Longrightarrow\;
+   \dim\ker(A-\lambda I) > 1$. \\
+  Diskreter Eigentakt einer Richtung. &
+  Kopplung mehrerer Richtungen im selben Takt. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{V.\ Wirbel vs.\ Quelle}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_5$ -- Rotation (Orthogonalität)} &
+  \textbf{$A_7$ -- Feldquelle (Divergenz/Spur)} \\
+  \midrule
+  $Q\in O(n):\; \lVert Q v\rVert = \lVert v\rVert$. &
+  $\tr(A) = \sum_i a_{ii}$ als Quellstärke (Divergenz). \\
+  Drehung erhält Länge, erzeugt aber keinen Fluss. &
+  Stationäre Quell- oder Senkenstärke. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{VI.\ Gefälle vs.\ Akkumulation}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_6$ -- Potential (quadratische Form)} &
+  \textbf{$A_{11}$ -- Integration (Skalarprodukt)} \\
+  \midrule
+  $\Phi(x) = x\T A\, x$. &
+  $\langle u, v\rangle = \displaystyle\int u\cdot v\,\mathrm{d}\mu$. \\
+  Lokales Gefälle einer Energiefläche. &
+  Globale Aufsummierung über das Maß. \\
+  \bottomrule
+\end{tabular}
+
+\subsection*{VII.\ Stufen vs.\ Kontinuum}
+\begin{tabular}{@{}LL@{}}
+  \toprule
+  \textbf{$A_9$ -- Quantisierung (Dimension)} &
+  \textbf{$A_{13}$ -- Dichte (Rang-Metrik)} \\
+  \midrule
+  $\dim(V) = n \in \mathbb{N}$. &
+  $\displaystyle \rho \;=\; \frac{\rg(A)}{\min(n,m)} \in [0,1]$
+   für $A\in\mathbb{R}^{n\times m}$. \\
+  Diskrete Stufung des Raums. &
+  Stetiges Maß der inneren Belegung. \\
+  \bottomrule
+\end{tabular}
+
+\bigskip
+\section*{Der lineare Fixpunkt $P_{19}$}
+
+\begin{quote}
+\itshape
+$P_{19}$ ist der einzige Punkt, an dem alle vierzehn Axiome simultan zum
+Eigenwert~$1$ konvergieren --- d.h.\ der Schnitt der vierzehn Eins-Eigenräume
+\[
+  P_{19} \;\in\; \bigcap_{k=1}^{14}\ \{\,x : A_k(x) = 1\cdot x\,\}.
+\]
+\end{quote}
+
+Eigenschaften:
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Simultanität.} Innerhalb jedes der sieben Dualpaare wirken
+    Wirkungs- und Strukturaspekt auf $P_{19}$ identisch. Damit ist die
+    Unterscheidung Operator/Raum aufgehoben.
+  \item \textbf{Linearität.} Aus $A(P_{19}) = 1\cdot P_{19}$ folgt
+    $A^n(P_{19}) = P_{19}$ für alle $n\in\mathbb{N}$: $P_{19}$ ist unter
+    Iteration stabil.
+  \item \textbf{Eindeutigkeit als Schnittpunkt.} $P_{19}$ ist nicht ein
+    achtes Paar, sondern derjenige Punkt, in dem die sieben Paare zusammen-
+    fallen --- die Invariante~19.
+\end{enumerate}
+
+\end{document}
