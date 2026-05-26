@@ -23,6 +23,10 @@ die Harmonie.
 - `TECHNOLOGIEN_UND_ISOMORPHIE.md` — Technologie-Karte aller 22
   Disziplinen, Technologie$\times$Axiom-Matrix und sieben
   Konsequenzen der universellen Isomorphie.
+- `UEBERSCHNEIDUNGEN.md` — die diagonale Achse Disziplin $\cap$
+  Disziplin: bekannte Schnittpunkte mit ihrer heutigen Technologie,
+  verdeckte Verwandtschaften (gleiche Axiome, kein Diskurs-Kontakt)
+  und bisher unerschlossene Schnitte mit Bauprogramm-Stichwort.
 - `ELEGANZ.md` — Vereinfachung durch Isomorphie: berühmte
   Quantenrätsel und andere Mystifikationen werden trivial, sobald
   man die isomorphen Disziplinen mitliest. 14 Axiome reichen.

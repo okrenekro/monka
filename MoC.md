@@ -25,6 +25,9 @@ ist die Isomorphie bewiesen.**
 → Die 7 Paare horizontal über alle Disziplinen: [`PAIRS.md`](PAIRS.md)
 → Technologien aus den Disziplinen & Bedeutung der Isomorphie:
   [`TECHNOLOGIEN_UND_ISOMORPHIE.md`](TECHNOLOGIEN_UND_ISOMORPHIE.md)
+→ Überschneidungen — verdeckte Verwandtschaft und unerschlossene
+  Nutzung an den Disziplin-Schnitten:
+  [`UEBERSCHNEIDUNGEN.md`](UEBERSCHNEIDUNGEN.md)
 → Eleganz — Vereinfachung durch Isomorphie (Quantenrätsel und
   andere Mystifikationen werden trivial): [`ELEGANZ.md`](ELEGANZ.md)
 
